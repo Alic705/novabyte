@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaByte — AI Engineering Studio | Custom AI Agents & Automation</title>
+  <meta name="description"
+    content="NovaByte designs, builds, and deploys production-grade AI agents, sub-second RAG engines, and automated workflow pipelines for modern enterprises. 100% code ownership, SOC-2 ready, and observable." />
+  <meta name="keywords" content="AI engineering studio, custom AI agents, enterprise RAG, LangGraph, LLM automation, agentic workflows, pgvector" />
+  <meta name="author" content="NovaByte AI Studio" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="NovaByte — Enterprise AI Engineering Studio" />
+  <meta property="og:description" content="Production-grade AI systems engineered for enterprise scale. Observable, deterministic, and fully owned by you." />
+  <meta property="og:url" content="https://novabyte.ai/" />
+  <meta property="og:image" content="logo.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="NovaByte — Enterprise AI Engineering Studio" />
+  <meta name="twitter:description" content="Production-grade AI systems engineered for enterprise scale. Observable, deterministic, and fully owned by you." />
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%2302dfc4'/%3E%3Cstop offset='100%25' stop-color='%23225df3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M16 2L6 18h8l-2 12 12-16h-8l2-12z' fill='url(%23g)'/%3E%3C/svg%3E" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+  <!-- Background Ambient Effects -->
+  <div class="page-bg"></div>
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+  <div class="glow glow-3"></div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- NAVBAR -->
+  <!-- ═══════════════════════════════════════════ -->
+  <nav class="navbar-main" id="navbar">
+    <div class="nav-inner">
+      <a class="logo" href="#hero">
+        <img src="logo.jpg" alt="NovaByte Logo" class="logo-img">
+        <span class="logo-text">Nova<span class="logo-accent">Byte</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#services" class="nav-link-item">Services</a></li>
+        <li><a href="#why-us" class="nav-link-item">Why Us</a></li>
+        <li><a href="#calculator" class="nav-link-item">ROI Estimator</a></li>
+        <li><a href="#process" class="nav-link-item">Process</a></li>
+        <li><a href="#portfolio" class="nav-link-item">Portfolio</a></li>
+        <li><a href="#tech" class="nav-link-item">Tech Stack</a></li>
+        <li><a href="#testimonials" class="nav-link-item">Testimonials</a></li>
+        <li><a href="#faq" class="nav-link-item">FAQ</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <a href="#contact" class="btn-cta-nav">
+          <span>Book Architecture Review</span>
+          <i class="bi bi-arrow-right"></i>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul class="mobile-nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#calculator">ROI Estimator</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#tech">Tech Stack</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn-cta-mobile">Schedule Free Discovery Call <i class="bi bi-arrow-right"></i></a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SECTION 1: HERO -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="container-fluid px-lg-5 px-3">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="hero-content" data-animate>
+            <div class="hero-badge">
+              <span class="badge-dot"></span>
+              <span>Next-Gen Enterprise AI Architecture</span>
+            </div>
+            <h1>
+              Production-grade AI systems,
+              <span class="gradient-text">engineered for enterprise scale.</span>
+            </h1>
+            <p class="hero-desc">
+              We architect, train, and deploy observable AI agents, sub-second RAG engines, and self-healing automation
+              workflows — built specifically for your proprietary data with 100% IP ownership.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#contact" class="btn-primary">
+                <span>Schedule Architecture Review</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+              <a href="#portfolio" class="btn-outline">
+                <span>Explore Deployments</span>
+                <span class="btn-arr">→</span>
+              </a>
+            </div>
+
+            <!-- Enterprise Trust & Verified Metrics Strip -->
+            <div class="hero-metrics-strip">
+              <div class="hero-stat">
+                <span class="stat-num">40<span class="stat-plus">+</span></span>
+                <span class="stat-title">Production Deployments</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="hero-stat">
+                <span class="stat-num">&lt;120<span class="stat-unit">ms</span></span>
+                <span class="stat-title">P95 Retrieval Latency</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="hero-stat">
+                <span class="stat-num">99.9<span class="stat-unit">%</span></span>
+                <span class="stat-title">Uptime SLA Guaranteed</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="hero-stat">
+                <span class="stat-num">$14M<span class="stat-plus">+</span></span>
+                <span class="stat-title">Client Value Created</span>
+              </div>
+            </div>
+
+            <!-- Trust Compliance Badges -->
+            <div class="hero-trust-badges">
+              <span class="trust-badge"><i class="bi bi-shield-check"></i> SOC-2 Type II Ready</span>
+              <span class="trust-badge"><i class="bi bi-lock"></i> Zero Data Retention</span>
+              <span class="trust-badge"><i class="bi bi-cloud-check"></i> AWS & GCP Partner</span>
+              <span class="trust-badge"><i class="bi bi-patch-check"></i> HIPAA Compliant Arch</span>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="hero-visual" data-animate>
+            <!-- Engineering Terminal / Agent Workspace -->
+            <div class="terminal-window">
+              <div class="term-header">
+                <div class="term-dots">
+                  <span class="t-dot red"></span>
+                  <span class="t-dot yellow"></span>
+                  <span class="t-dot green"></span>
+                </div>
+                <div class="term-tabs">
+                  <button class="term-tab active" id="tabAgent" data-tab="agent"><i class="bi bi-terminal"></i> agent_engine.ts</button>
+                  <button class="term-tab" id="tabTelemetry" data-tab="telemetry"><i class="bi bi-activity"></i> telemetry.log</button>
+                </div>
+                <div class="term-status">
+                  <span class="status-pulse"></span>
+                  <span>SYSTEM_HEALTHY</span>
+                </div>
+              </div>
+
+              <!-- Tab 1: Agent Execution Workflow -->
+              <div class="term-body" id="termBodyAgent">
+                <div class="term-line prefix">
+                  <span class="term-prompt">agent@novabyte:~$</span>
+                  <span class="term-cmd">orchestrate --workflow=rag_retrieval --model=claude-3.5-sonnet</span>
+                </div>
+
+                <div class="term-card-step">
+                  <div class="step-meta">
+                    <span class="step-badge success">STEP 01</span>
+                    <span class="step-title">Vector Ingestion & Hybrid Rerank</span>
+                    <span class="step-time">38ms</span>
+                  </div>
+                  <div class="step-details">
+                    <code>pgvector.query(embedding, top_k=24, min_similarity=0.88)</code>
+                    <div class="step-stat-pills">
+                      <span>Docs: 240,000</span>
+                      <span>Score: 0.942</span>
+                      <span>Cache: HIT</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="term-card-step">
+                  <div class="step-meta">
+                    <span class="step-badge active">STEP 02</span>
+                    <span class="step-title">Tool Execution & Reasoning Chain</span>
+                    <span class="step-time">81ms</span>
+                  </div>
+                  <div class="step-details">
+                    <div class="tool-run">
+                      <i class="bi bi-gear"></i>
+                      <span>calling: <strong>db_lookup_policies(org_id="ENT_942")</strong></span>
+                    </div>
+                    <div class="tool-response">
+                      <span class="chk-icon">✓</span>
+                      <span>Confidence score 98.6% · Hallucination guardrails passed</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="term-output-stream">
+                  <div class="stream-header">
+                    <span>Synthesized Output Response</span>
+                    <span class="token-rate">124 tok/sec</span>
+                  </div>
+                  <div class="stream-content">
+                    "Audit report generated: System routed request via LangGraph stateful agent. Policy validation
+                    confirmed across 4 distributed nodes with zero exceptions."
+                    <span class="terminal-cursor"></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tab 2: Live Telemetry Stream -->
+              <div class="term-body d-none" id="termBodyTelemetry">
+                <div class="term-line prefix">
+                  <span class="term-prompt">telemetry@novabyte:~$</span>
+                  <span class="term-cmd">stream --tail -f --filter=production_p95</span>
+                </div>
+
+                <div class="telemetry-grid">
+                  <div class="telem-card">
+                    <div class="telem-label">THROUGHPUT</div>
+                    <div class="telem-value">1,480 req/min</div>
+                    <div class="telem-sub text-success">↑ 12% vs last hour</div>
+                  </div>
+                  <div class="telem-card">
+                    <div class="telem-label">P95 LATENCY</div>
+                    <div class="telem-value cyan">114ms</div>
+                    <div class="telem-sub">Target &lt; 200ms</div>
+                  </div>
+                  <div class="telem-card">
+                    <div class="telem-label">GUARDRAIL PASS</div>
+                    <div class="telem-value green">99.82%</div>
+                    <div class="telem-sub">Zero leakages</div>
+                  </div>
+                  <div class="telem-card">
+                    <div class="telem-label">TOKEN EFFICIENCY</div>
+                    <div class="telem-value violet">4.2x</div>
+                    <div class="telem-sub">Prompt compression</div>
+                  </div>
+                </div>
+
+                <div class="telem-log-window">
+                  <div class="log-line"><span class="log-t">04:22:18</span> <span class="log-info">[RAG_CACHE]</span> Embedding hit for query hash #78d2b - latency 4ms</div>
+                  <div class="log-line"><span class="log-t">04:22:19</span> <span class="log-info">[LANGGRAPH]</span> Node 'evaluate_risk' transitioned to 'execute_action'</div>
+                  <div class="log-line"><span class="log-t">04:22:20</span> <span class="log-ok">[GUARDRAIL]</span> NeMo guardrail check verified 0 PII entities in response</div>
+                  <div class="log-line"><span class="log-t">04:22:21</span> <span class="log-ok">[STREAM]</span> 384 tokens returned cleanly to client API gateway</div>
+                </div>
+              </div>
+
+              <div class="term-footer">
+                <div class="tf-item">
+                  <span class="tf-label">LATENCY:</span>
+                  <span class="tf-val cyan">119ms</span>
+                </div>
+                <div class="tf-sep"></div>
+                <div class="tf-item">
+                  <span class="tf-label">EST. COST:</span>
+                  <span class="tf-val">$0.0028</span>
+                </div>
+                <div class="tf-sep"></div>
+                <div class="tf-item">
+                  <span class="tf-label">ACCURACY:</span>
+                  <span class="tf-val green">99.4%</span>
+                </div>
+                <div class="tf-right">
+                  <span>trace_id: #nv-84910</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Runtime Technology Marquee -->
+  <div class="runtime-section">
+    <div class="runtime-stack-inner">
+      <span class="stack-label">ENTERPRISE_STACK</span>
+      <div class="marquee-outer">
+        <div class="marquee-track">
+          <span class="stack-item"><i class="bi bi-cpu"></i> OpenAI</span><span class="stack-dot"></span>
+          <span class="stack-item"><i class="bi bi-stars"></i> Anthropic Claude</span><span class="stack-dot"></span>
+          <span class="stack-item"><i class="bi bi-diagram-3"></i> LangGraph</span><span class="stack-dot"></span>
+          <span class="stack-item"><i class="bi bi-database"></i> Pinecone</span><span class="stack-dot"></span>
+          <span class="stack-item"><i class="bi bi-hdd-stack"></i> pgvector</span><span class="stack-dot"></span>
+          <span class="stack-item"><i class="bi bi-lightning-charge"></i> Supabase</span><span class="stack-dot"></span>
+          <span class="stack-item"><i class="bi bi-cloud"></i> AWS Bedrock</span><span class="stack-dot"></span>
+          <span class="stack-item"><i class="bi bi-google"></i> Google Cloud Vertex</span><span class="stack-dot"></span>
+          <span class="stack-item"><i class="bi bi-shield-check"></i> LangSmith</span><span class="stack-dot"></span>
+          <span class="stack-item"><i class="bi bi-speedometer2"></i> FastAPI</span><span class="stack-dot"></span>
+          <span class="stack-item"><i class="bi bi-cpu"></i> OpenAI</span><span class="stack-dot"></span>
+          <span class="stack-item"><i class="bi bi-stars"></i> Anthropic Claude</span><span class="stack-dot"></span>
+          <span class="stack-item"><i class="bi bi-diagram-3"></i> LangGraph</span><span class="stack-dot"></span>
+          <span class="stack-item"><i class="bi bi-database"></i> Pinecone</span><span class="stack-dot"></span>
+          <span class="stack-item"><i class="bi bi-hdd-stack"></i> pgvector</span><span class="stack-dot"></span>
+          <span class="stack-item"><i class="bi bi-lightning-charge"></i> Supabase</span><span class="stack-dot"></span>
+          <span class="stack-item"><i class="bi bi-cloud"></i> AWS Bedrock</span><span class="stack-dot"></span>
+          <span class="stack-item"><i class="bi bi-google"></i> Google Cloud Vertex</span><span class="stack-dot"></span>
+          <span class="stack-item"><i class="bi bi-shield-check"></i> LangSmith</span><span class="stack-dot"></span>
+          <span class="stack-item"><i class="bi bi-speedometer2"></i> FastAPI</span><span class="stack-dot"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SECTION 2: SERVICES -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="services-section" id="services">
+    <div class="container-fluid px-lg-5 px-3">
+      <div class="section-header" data-animate>
+        <span class="section-tag">ENGINEERING SERVICES</span>
+        <h2>End-to-end AI engineering<br><span class="gradient-text">for modern businesses</span></h2>
+        <p class="section-desc">From initial proof-of-concept to production deployment with continuous evaluation, we build intelligent systems that scale with your operations and deliver measurable ROI.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Service 1 -->
+        <div class="col-lg-4 col-md-6" data-animate>
+          <div class="service-card">
+            <div class="service-top-badge">Sprint Ready</div>
+            <div class="service-icon">
+              <i class="bi bi-robot"></i>
+            </div>
+            <h3>Autonomous AI Agents</h3>
+            <p class="service-desc">Multi-agent orchestrations that execute complex multi-step workflows autonomously — operations, financial audit, ticketing, and document processing.</p>
+            <div class="service-spec-pill">
+              <span class="pill-title">Deployment:</span> 2-4 Weeks Sprint
+            </div>
+            <ul class="service-features">
+              <li><i class="bi bi-check2"></i> LangGraph stateful memory & cyclic graphs</li>
+              <li><i class="bi bi-check2"></i> Deterministic function calling & API tools</li>
+              <li><i class="bi bi-check2"></i> Human-in-the-loop escalation controls</li>
+              <li><i class="bi bi-check2"></i> Continuous LangSmith evals & trace monitoring</li>
+            </ul>
+            <div class="service-footer">
+              <div class="service-price">From $6,500 <span>/ project</span></div>
+              <a href="#contact" class="service-btn" data-service="ai-agents">Build Agent <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2 (Featured) -->
+        <div class="col-lg-4 col-md-6" data-animate>
+          <div class="service-card featured">
+            <div class="service-top-badge badge-popular">Most Requested</div>
+            <div class="service-icon">
+              <i class="bi bi-database-gear"></i>
+            </div>
+            <h3>Enterprise RAG Platforms</h3>
+            <p class="service-desc">High-precision Retrieval-Augmented Generation engines with sub-2% hallucination rates. Transform unstructured PDFs, wikis, and databases into verified answers.</p>
+            <div class="service-spec-pill">
+              <span class="pill-title">Accuracy:</span> &gt;98.5% with Evidence Citation
+            </div>
+            <ul class="service-features">
+              <li><i class="bi bi-check2"></i> Hybrid vector + BM25 keyword search</li>
+              <li><i class="bi bi-check2"></i> Cohere/BGE cross-encoder reranking</li>
+              <li><i class="bi bi-check2"></i> Real-time document ingestion streams</li>
+              <li><i class="bi bi-check2"></i> Strict RBAC & document security segregation</li>
+            </ul>
+            <div class="service-footer">
+              <div class="service-price">From $5,500 <span>/ project</span></div>
+              <a href="#contact" class="service-btn" data-service="rag">Deploy RAG <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="col-lg-4 col-md-6" data-animate>
+          <div class="service-card">
+            <div class="service-top-badge">High ROI</div>
+            <div class="service-icon">
+              <i class="bi bi-gear-wide-connected"></i>
+            </div>
+            <h3>Workflow Automation Pipelines</h3>
+            <p class="service-desc">Resilient event-driven automation that eradicates repetitive manual bottlenecks. Data ingestion, categorization, cross-system sync, and automated execution.</p>
+            <div class="service-spec-pill">
+              <span class="pill-title">Latency:</span> Sub-second event triggers
+            </div>
+            <ul class="service-features">
+              <li><i class="bi bi-check2"></i> Event-driven microservices with Redis & Kafka</li>
+              <li><i class="bi bi-check2"></i> Self-healing pipelines with fallback logic</li>
+              <li><i class="bi bi-check2"></i> Multi-channel webhook & CRM integration</li>
+              <li><i class="bi bi-check2"></i> 99.9% uptime SLA monitoring & telemetry</li>
+            </ul>
+            <div class="service-footer">
+              <div class="service-price">From $4,500 <span>/ project</span></div>
+              <a href="#contact" class="service-btn" data-service="automation">Automate <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="col-lg-4 col-md-6" data-animate>
+          <div class="service-card">
+            <div class="service-top-badge">Customer Experience</div>
+            <div class="service-icon">
+              <i class="bi bi-chat-dots"></i>
+            </div>
+            <h3>Conversational AI & Copilots</h3>
+            <p class="service-desc">Intelligent domain-specific copilots that comprehend nuanced customer intent, maintain session history, and resolve issues across Zendesk, Slack, or web.</p>
+            <div class="service-spec-pill">
+              <span class="pill-title">Resolution:</span> Up to 75% automated deflection
+            </div>
+            <ul class="service-features">
+              <li><i class="bi bi-check2"></i> Contextual memory & user personalization</li>
+              <li><i class="bi bi-check2"></i> Omni-channel support (Web, Slack, WhatsApp)</li>
+              <li><i class="bi bi-check2"></i> Sentiment tracking & automated supervisor handover</li>
+              <li><i class="bi bi-check2"></i> Custom guardrails against off-brand outputs</li>
+            </ul>
+            <div class="service-footer">
+              <div class="service-price">From $4,800 <span>/ project</span></div>
+              <a href="#contact" class="service-btn" data-service="chatbot">Build Copilot <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="col-lg-4 col-md-6" data-animate>
+          <div class="service-card">
+            <div class="service-top-badge">Decision Support</div>
+            <div class="service-icon">
+              <i class="bi bi-graph-up-arrow"></i>
+            </div>
+            <h3>Predictive ML & AI Analytics</h3>
+            <p class="service-desc">Turn raw transactional logs and enterprise data into predictive operational foresight. Anomaly detection, demand forecasting, and real-time executive summaries.</p>
+            <div class="service-spec-pill">
+              <span class="pill-title">Outcome:</span> Data-backed operational decisions
+            </div>
+            <ul class="service-features">
+              <li><i class="bi bi-check2"></i> Bespoke predictive models trained on your data</li>
+              <li><i class="bi bi-check2"></i> Automated SQL generation & natural language BI</li>
+              <li><i class="bi bi-check2"></i> Proactive anomaly alert dispatchers</li>
+              <li><i class="bi bi-check2"></i> Executive visual dashboards & weekly briefings</li>
+            </ul>
+            <div class="service-footer">
+              <div class="service-price">From $5,000 <span>/ project</span></div>
+              <a href="#contact" class="service-btn" data-service="analytics">Explore Analytics <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="col-lg-4 col-md-6" data-animate>
+          <div class="service-card">
+            <div class="service-top-badge">Advisory & Audit</div>
+            <div class="service-icon">
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <h3>Architecture Audit & AI Roadmap</h3>
+            <p class="service-desc">Thorough technical evaluation of your current data readiness, security boundaries, and AI viability. We provide a concrete 90-day architecture plan.</p>
+            <div class="service-spec-pill">
+              <span class="pill-title">Duration:</span> 1-Week Comprehensive Audit
+            </div>
+            <ul class="service-features">
+              <li><i class="bi bi-check2"></i> Technical stack & security vulnerability audit</li>
+              <li><i class="bi bi-check2"></i> Token cost modeling & ROI projection</li>
+              <li><i class="bi bi-check2"></i> Architectural blueprint & model selection</li>
+              <li><i class="bi bi-check2"></i> Executive presentation & engineer workshops</li>
+            </ul>
+            <div class="service-footer">
+              <div class="service-price">From $3,500 <span>/ audit</span></div>
+              <a href="#contact" class="service-btn" data-service="consulting">Book Audit <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SECTION 3: WHY US / COMPARISON -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="why-us-section" id="why-us">
+    <div class="container-fluid px-lg-5 px-3">
+      <div class="section-header text-center" data-animate>
+        <span class="section-tag">ENGINEERING STANDARDS</span>
+        <h2>Why enterprise teams choose <span class="gradient-text">NovaByte</span></h2>
+        <p class="section-desc mx-auto">We aren't a wrapper shop or generalist agency. We are dedicated systems engineers who treat AI as mission-critical infrastructure.</p>
+      </div>
+
+      <div class="table-responsive comparison-wrap" data-animate>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th class="col-feature">Architectural Standard</th>
+              <th class="col-novabyte"><div class="badge-novabyte">NovaByte Studio</div></th>
+              <th class="col-others">Traditional Dev Agencies</th>
+              <th class="col-others">Off-the-shelf SaaS Bots</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="feat-name">
+                <strong>Source Code & Model Ownership</strong>
+                <span>Where does the intellectual property live?</span>
+              </td>
+              <td class="col-novabyte"><i class="bi bi-check-circle-fill text-success"></i> <strong>100% Owned by You</strong> (Git repo transfer)</td>
+              <td class="col-others"><i class="bi bi-dash-circle text-muted"></i> Often proprietary lock-in</td>
+              <td class="col-others"><i class="bi bi-x-circle text-danger"></i> Zero ownership (closed vendor)</td>
+            </tr>
+            <tr>
+              <td class="feat-name">
+                <strong>Data Privacy & Security</strong>
+                <span>Are enterprise prompts used for model training?</span>
+              </td>
+              <td class="col-novabyte"><i class="bi bi-check-circle-fill text-success"></i> <strong>Zero Data Retention</strong>, VPC / On-Prem isolation</td>
+              <td class="col-others"><i class="bi bi-exclamation-circle text-warning"></i> Standard commercial APIs</td>
+              <td class="col-others"><i class="bi bi-x-circle text-danger"></i> Multi-tenant public cloud risks</td>
+            </tr>
+            <tr>
+              <td class="feat-name">
+                <strong>Delivery Velocity</strong>
+                <span>From kickoff to verified staging deployment</span>
+              </td>
+              <td class="col-novabyte"><i class="bi bi-check-circle-fill text-success"></i> <strong>2 to 4 Weeks</strong> (Production sprint)</td>
+              <td class="col-others"><i class="bi bi-dash-circle text-muted"></i> 3 to 6+ months of discovery</td>
+              <td class="col-others"><i class="bi bi-check-circle text-success"></i> Instant, but limited capability</td>
+            </tr>
+            <tr>
+              <td class="feat-name">
+                <strong>Hallucination Guardrails</strong>
+                <span>Accuracy checks before outputs hit users or databases</span>
+              </td>
+              <td class="col-novabyte"><i class="bi bi-check-circle-fill text-success"></i> <strong>Deterministic verification</strong> + LangSmith Evals</td>
+              <td class="col-others"><i class="bi bi-x-circle text-danger"></i> Basic prompt engineering only</td>
+              <td class="col-others"><i class="bi bi-x-circle text-danger"></i> Blackbox heuristics</td>
+            </tr>
+            <tr>
+              <td class="feat-name">
+                <strong>Legacy System Tool Calling</strong>
+                <span>Connecting to PostgreSQL, ERPs, CRMs, APIs</span>
+              </td>
+              <td class="col-novabyte"><i class="bi bi-check-circle-fill text-success"></i> <strong>Bespoke Typed Tool Connectors</strong></td>
+              <td class="col-others"><i class="bi bi-dash-circle text-muted"></i> Fragile glue code</td>
+              <td class="col-others"><i class="bi bi-x-circle text-danger"></i> Limited standard integrations</td>
+            </tr>
+            <tr>
+              <td class="feat-name">
+                <strong>Post-Launch Guarantee</strong>
+                <span>Support after production deployment</span>
+              </td>
+              <td class="col-novabyte"><i class="bi bi-check-circle-fill text-success"></i> <strong>30-day warranty</strong> + optional SLA retainer</td>
+              <td class="col-others"><i class="bi bi-dash-circle text-muted"></i> Expensive change orders</td>
+              <td class="col-others"><i class="bi bi-dash-circle text-muted"></i> Standard email tickets</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SECTION 4: INTERACTIVE ROI CALCULATOR -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="calculator-section" id="calculator">
+    <div class="container-fluid px-lg-5 px-3">
+      <div class="calc-card" data-animate>
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5">
+            <span class="section-tag">BUSINESS IMPACT</span>
+            <h2>Estimate your <span class="gradient-text">annual ROI</span> with custom AI</h2>
+            <p class="calc-desc">
+              Calculate projected cost savings and recovered engineering/operational hours by deploying autonomous agents and RAG pipelines.
+            </p>
+
+            <div class="calc-controls">
+              <div class="calc-control-group">
+                <label class="calc-label" for="calcWorkflow">Select Primary AI Workflow</label>
+                <select id="calcWorkflow" class="calc-select">
+                  <option value="support" selected>Customer Support & Escalation (70% Deflection)</option>
+                  <option value="rag">Internal Knowledge RAG & Doc Search (10x Speedup)</option>
+                  <option value="ops">Back-Office & Order Pipeline Automation (85% Hands-off)</option>
+                </select>
+              </div>
+
+              <div class="calc-control-group">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <label class="calc-label mb-0" for="hoursSlider">Team Hours Spent on Task / Week</label>
+                  <span class="calc-slider-val" id="hoursDisplay">40 hrs/wk</span>
+                </div>
+                <input type="range" id="hoursSlider" class="form-range custom-range" min="10" max="200" step="5" value="40">
+                <div class="d-flex justify-content-between range-labels">
+                  <span>10 hrs</span>
+                  <span>100 hrs</span>
+                  <span>200 hrs</span>
+                </div>
+              </div>
+
+              <div class="calc-control-group mb-0">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <label class="calc-label mb-0" for="rateSlider">Average Blended Hourly Cost</label>
+                  <span class="calc-slider-val" id="rateDisplay">$55 / hr</span>
+                </div>
+                <input type="range" id="rateSlider" class="form-range custom-range" min="30" max="150" step="5" value="55">
+                <div class="d-flex justify-content-between range-labels">
+                  <span>$30/hr</span>
+                  <span>$90/hr</span>
+                  <span>$150/hr</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="calc-results-wrap">
+              <div class="results-header">
+                <span class="res-badge"><i class="bi bi-lightning-charge-fill"></i> PROJECTED ANNUAL IMPACT</span>
+                <span class="res-sub">Based on 40+ NovaByte enterprise builds</span>
+              </div>
+
+              <div class="results-grid">
+                <div class="res-stat-card primary-stat">
+                  <span class="res-label">Projected Annual Savings</span>
+                  <div class="res-value gradient-text" id="annualSavings">$80,080</div>
+                  <span class="res-note">Net operational cost reduction</span>
+                </div>
+
+                <div class="res-stat-card">
+                  <span class="res-label">Hours Recovered / Year</span>
+                  <div class="res-value" id="hoursSaved">1,456 hrs</div>
+                  <span class="res-note">Redirected to high-value initiatives</span>
+                </div>
+
+                <div class="res-stat-card">
+                  <span class="res-label">Estimated Payback Period</span>
+                  <div class="res-value text-success" id="paybackPeriod">&lt; 38 Days</div>
+                  <span class="res-note">Rapid capital amortization</span>
+                </div>
+
+                <div class="res-stat-card">
+                  <span class="res-label">Expected Accuracy Benchmark</span>
+                  <div class="res-value text-info">98.4%</div>
+                  <span class="res-note">Multi-step guardrail verified</span>
+                </div>
+              </div>
+
+              <div class="calc-cta-row">
+                <div class="calc-cta-text">
+                  <strong>Ready to unlock these operational efficiencies?</strong>
+                  <span>We build a tailored prototype in your first 14 days.</span>
+                </div>
+                <a href="#contact" class="btn-primary" id="calcCtaBtn">
+                  <span>Unlock My Savings</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SECTION 5: PROCESS -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="process-section" id="process">
+    <div class="container-fluid px-lg-5 px-3">
+      <div class="section-header" data-animate>
+        <span class="section-tag">STRUCTURED ROADMAP</span>
+        <h2>How we build & ship<br><span class="gradient-text">production systems in 4 weeks</span></h2>
+        <p class="section-desc">A disciplined, agile engineering sprint that takes your proprietary data from unstructured noise to observable production agents.</p>
+      </div>
+
+      <div class="process-timeline">
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6" data-animate>
+            <div class="process-card">
+              <div class="process-header">
+                <span class="phase-badge">PHASE 01</span>
+                <span class="phase-duration">WEEK 1</span>
+              </div>
+              <h3 class="process-title">Feasibility & Architecture</h3>
+              <p class="process-text">
+                Deep audit of data sources, latency targets, and compliance requirements. We define evaluation metrics,
+                select the optimal model foundation, and build a proof of concept.
+              </p>
+              <div class="process-deliverables">
+                <div class="deliv-item"><i class="bi bi-check2"></i> Technical Architecture Spec</div>
+                <div class="deliv-item"><i class="bi bi-check2"></i> Baseline Evaluation Benchmark</div>
+                <div class="deliv-item"><i class="bi bi-check2"></i> Security & RBAC Protocol</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-animate>
+            <div class="process-card">
+              <div class="process-header">
+                <span class="phase-badge">PHASE 02</span>
+                <span class="phase-duration">WEEK 2</span>
+              </div>
+              <h3 class="process-title">Data Pipeline & Retrieval</h3>
+              <p class="process-text">
+                Implement parsing pipelines for complex enterprise documents. Deploy hybrid vector search (pgvector /
+                Pinecone), semantic cache layers, and cross-encoder rerankers.
+              </p>
+              <div class="process-deliverables">
+                <div class="deliv-item"><i class="bi bi-check2"></i> High-density Vector Index</div>
+                <div class="deliv-item"><i class="bi bi-check2"></i> Real-time Ingestion Stream</div>
+                <div class="deliv-item"><i class="bi bi-check2"></i> Chunking & Metadata Topology</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-animate>
+            <div class="process-card">
+              <div class="process-header">
+                <span class="phase-badge">PHASE 03</span>
+                <span class="phase-duration">WEEK 3</span>
+              </div>
+              <h3 class="process-title">Agent Logic & Guardrails</h3>
+              <p class="process-text">
+                Construct autonomous multi-step reasoning chains using LangGraph. We implement deterministic
+                hallucination guardrails, fallback handlers, and tool integrations.
+              </p>
+              <div class="process-deliverables">
+                <div class="deliv-item"><i class="bi bi-check2"></i> Stateful LangGraph Workflows</div>
+                <div class="deliv-item"><i class="bi bi-check2"></i> Automated Eval Test Suites</div>
+                <div class="deliv-item"><i class="bi bi-check2"></i> Tool Handshake Verification</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-animate>
+            <div class="process-card">
+              <div class="process-header">
+                <span class="phase-badge">PHASE 04</span>
+                <span class="phase-duration">WEEK 4</span>
+              </div>
+              <h3 class="process-title">Production Handoff & SLA</h3>
+              <p class="process-text">
+                Deploy containerized services with Datadog/LangSmith observability, autoscaling policies, CI/CD
+                pipelines, and full team training with source code transfer.
+              </p>
+              <div class="process-deliverables">
+                <div class="deliv-item"><i class="bi bi-check2"></i> Full Codebase Ownership</div>
+                <div class="deliv-item"><i class="bi bi-check2"></i> 30-day Post-Launch Support</div>
+                <div class="deliv-item"><i class="bi bi-check2"></i> Observability Runbooks</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SECTION 6: PORTFOLIO -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="portfolio-section" id="portfolio">
+    <div class="container-fluid px-lg-5 px-3">
+      <div class="section-header" data-animate>
+        <span class="section-tag">DEPLOYED CASE STUDIES</span>
+        <h2>Systems we've built<br><span class="gradient-text">that drive real results</span></h2>
+        <p class="section-desc">Every project ships with live observability, structured documentation, and an engineering handoff that makes your team self-sufficient.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Project 1 -->
+        <div class="col-lg-6" data-animate>
+          <div class="portfolio-card">
+            <div class="portfolio-header">
+              <div class="d-flex align-items-center gap-2">
+                <span class="portfolio-tag">Enterprise RAG</span>
+                <span class="portfolio-tag-industry">Healthcare & Clinical</span>
+              </div>
+              <span class="verified-badge"><i class="bi bi-patch-check-fill"></i> In Production</span>
+            </div>
+            <h3>MedAssist AI — Clinical Knowledge Retrieval</h3>
+            <p>An intelligent medical knowledge assistant indexing 200,000+ peer-reviewed clinical guidelines and patient protocol documents. Clinicians query complex diagnoses in natural language and receive verifiable citations in seconds.</p>
+            <div class="portfolio-metrics">
+              <div class="port-metric">
+                <span class="port-metric-val">98.4%</span>
+                <span class="port-metric-label">Fact Precision</span>
+              </div>
+              <div class="port-metric">
+                <span class="port-metric-val">1.8s</span>
+                <span class="port-metric-label">P95 Latency</span>
+              </div>
+              <div class="port-metric">
+                <span class="port-metric-val">200K+</span>
+                <span class="port-metric-label">Docs Indexed</span>
+              </div>
+            </div>
+            <div class="portfolio-quote">
+              "Reduced our clinical research lookup time by 80% with zero fabricated citations."
+            </div>
+            <div class="portfolio-tech">
+              <span>pgvector</span>
+              <span>Claude 3.5</span>
+              <span>Cohere Rerank</span>
+              <span>FastAPI</span>
+              <span>HIPAA Compliant</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-lg-6" data-animate>
+          <div class="portfolio-card">
+            <div class="portfolio-header">
+              <div class="d-flex align-items-center gap-2">
+                <span class="portfolio-tag">Autonomous Agent</span>
+                <span class="portfolio-tag-industry">FinTech & Asset Management</span>
+              </div>
+              <span class="verified-badge"><i class="bi bi-patch-check-fill"></i> In Production</span>
+            </div>
+            <h3>TradeFlow Copilot — Quantitative Market Analysis</h3>
+            <p>Autonomous quantitative assistant that monitors multi-exchange market feeds, executes compliance verification on scheduled orders, and generates real-time risk alerts for institutional portfolio managers.</p>
+            <div class="portfolio-metrics">
+              <div class="port-metric">
+                <span class="port-metric-val">12x</span>
+                <span class="port-metric-label">Faster Analysis</span>
+              </div>
+              <div class="port-metric">
+                <span class="port-metric-val">99.99%</span>
+                <span class="port-metric-label">Uptime Record</span>
+              </div>
+              <div class="port-metric">
+                <span class="port-metric-val">$2.4M</span>
+                <span class="port-metric-label">Cost Saved / Yr</span>
+              </div>
+            </div>
+            <div class="portfolio-quote">
+              "We monitor 400+ securities simultaneously with automated audit reports generated in minutes."
+            </div>
+            <div class="portfolio-tech">
+              <span>LangGraph</span>
+              <span>GPT-4o</span>
+              <span>Redis Cluster</span>
+              <span>AWS ECS</span>
+              <span>Docker</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="col-lg-6" data-animate>
+          <div class="portfolio-card">
+            <div class="portfolio-header">
+              <div class="d-flex align-items-center gap-2">
+                <span class="portfolio-tag">Pipeline Automation</span>
+                <span class="portfolio-tag-industry">Global Logistics & E-Com</span>
+              </div>
+              <span class="verified-badge"><i class="bi bi-patch-check-fill"></i> In Production</span>
+            </div>
+            <h3>OrderPulse Engine — High-Volume Dispatch Router</h3>
+            <p>End-to-end order orchestration pipeline parsing 50,000+ daily orders across 3 fulfillment hubs. Features automated exception detection, customs declaration generation, and self-healing courier dispatching.</p>
+            <div class="portfolio-metrics">
+              <div class="port-metric">
+                <span class="port-metric-val">50K+</span>
+                <span class="port-metric-label">Orders / Day</span>
+              </div>
+              <div class="port-metric">
+                <span class="port-metric-val">87%</span>
+                <span class="port-metric-label">Manual Work Cut</span>
+              </div>
+              <div class="port-metric">
+                <span class="port-metric-val">0.02%</span>
+                <span class="port-metric-label">Discrepancy Rate</span>
+              </div>
+            </div>
+            <div class="portfolio-quote">
+              "Processed Black Friday volume seamlessly without adding a single temporary support hire."
+            </div>
+            <div class="portfolio-tech">
+              <span>Python</span>
+              <span>Apache Kafka</span>
+              <span>Supabase</span>
+              <span>LangSmith</span>
+              <span>K8s</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="col-lg-6" data-animate>
+          <div class="portfolio-card">
+            <div class="portfolio-header">
+              <div class="d-flex align-items-center gap-2">
+                <span class="portfolio-tag">Conversational AI</span>
+                <span class="portfolio-tag-industry">Enterprise SaaS</span>
+              </div>
+              <span class="verified-badge"><i class="bi bi-patch-check-fill"></i> In Production</span>
+            </div>
+            <h3>SupportAI Agent — Omni-Channel Resolution Copilot</h3>
+            <p>Intelligent tier-1 and tier-2 customer support agent resolving complex software account and billing inquiries autonomously. Seamless two-way integration with Zendesk, Jira, and internal billing APIs.</p>
+            <div class="portfolio-metrics">
+              <div class="port-metric">
+                <span class="port-metric-val">73%</span>
+                <span class="port-metric-label">Auto-Resolved</span>
+              </div>
+              <div class="port-metric">
+                <span class="port-metric-val">4.9★</span>
+                <span class="port-metric-label">CSAT Score</span>
+              </div>
+              <div class="port-metric">
+                <span class="port-metric-val">12s</span>
+                <span class="port-metric-label">Avg First Response</span>
+              </div>
+            </div>
+            <div class="portfolio-quote">
+              "Customer satisfaction soared while our human support team finally got time to tackle tier-3 bugs."
+            </div>
+            <div class="portfolio-tech">
+              <span>Claude 3.5</span>
+              <span>Zendesk API</span>
+              <span>Vercel Edge</span>
+              <span>Pinecone</span>
+              <span>Stripe</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SECTION 7: TECH STACK -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="tech-section" id="tech">
+    <div class="container-fluid px-lg-5 px-3">
+      <div class="section-header" data-animate>
+        <span class="section-tag">PRODUCTION ARSENAL</span>
+        <h2>Best-of-breed infrastructure.<br><span class="gradient-text">Zero vendor lock-in.</span></h2>
+        <p class="section-desc">We build exclusively with industry-standard, production-proven tools. No opaque proprietary frameworks that hold your infrastructure hostage.</p>
+      </div>
+
+      <div class="row g-4" data-animate>
+        <!-- Column 1: Foundation Models -->
+        <div class="col-lg-3 col-md-6">
+          <div class="tech-col-card">
+            <div class="col-header">
+              <div class="col-icon-wrap"><i class="bi bi-cpu"></i></div>
+              <div>
+                <h4>LLMs & Reasoning</h4>
+                <span class="col-sub">Frontier Cognitive Models</span>
+              </div>
+            </div>
+            <div class="tech-badge-list">
+              <div class="tech-chip">
+                <div class="chip-main">
+                  <span class="chip-title">Claude 3.5 Sonnet</span>
+                  <span class="chip-tag">Code & Complex Reasoning</span>
+                </div>
+              </div>
+              <div class="tech-chip">
+                <div class="chip-main">
+                  <span class="chip-title">OpenAI GPT-4o / o1</span>
+                  <span class="chip-tag">Multimodal Logic</span>
+                </div>
+              </div>
+              <div class="tech-chip">
+                <div class="chip-main">
+                  <span class="chip-title">Llama 3.3 70B</span>
+                  <span class="chip-tag">Air-Gapped Private VPC</span>
+                </div>
+              </div>
+              <div class="tech-chip">
+                <div class="chip-main">
+                  <span class="chip-title">DeepSeek R1</span>
+                  <span class="chip-tag">High-Density Math & Reasoning</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Agentic Orchestration -->
+        <div class="col-lg-3 col-md-6">
+          <div class="tech-col-card">
+            <div class="col-header">
+              <div class="col-icon-wrap"><i class="bi bi-diagram-3"></i></div>
+              <div>
+                <h4>Orchestration</h4>
+                <span class="col-sub">Stateful Graph Control</span>
+              </div>
+            </div>
+            <div class="tech-badge-list">
+              <div class="tech-chip">
+                <div class="chip-main">
+                  <span class="chip-title">LangGraph</span>
+                  <span class="chip-tag">Cyclic Agent Multi-State</span>
+                </div>
+              </div>
+              <div class="tech-chip">
+                <div class="chip-main">
+                  <span class="chip-title">LlamaIndex</span>
+                  <span class="chip-tag">Hierarchical Doc Parsing</span>
+                </div>
+              </div>
+              <div class="tech-chip">
+                <div class="chip-main">
+                  <span class="chip-title">FastAPI</span>
+                  <span class="chip-tag">Async Python Streaming</span>
+                </div>
+              </div>
+              <div class="tech-chip">
+                <div class="chip-main">
+                  <span class="chip-title">LangSmith</span>
+                  <span class="chip-tag">Continuous Evals & Tracing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 3: Storage & Vector -->
+        <div class="col-lg-3 col-md-6">
+          <div class="tech-col-card">
+            <div class="col-header">
+              <div class="col-icon-wrap"><i class="bi bi-database"></i></div>
+              <div>
+                <h4>Vector & Storage</h4>
+                <span class="col-sub">Sub-Second Search</span>
+              </div>
+            </div>
+            <div class="tech-badge-list">
+              <div class="tech-chip">
+                <div class="chip-main">
+                  <span class="chip-title">pgvector</span>
+                  <span class="chip-tag">Postgres Hybrid Search</span>
+                </div>
+              </div>
+              <div class="tech-chip">
+                <div class="chip-main">
+                  <span class="chip-title">Pinecone</span>
+                  <span class="chip-tag">Serverless Vector Index</span>
+                </div>
+              </div>
+              <div class="tech-chip">
+                <div class="chip-main">
+                  <span class="chip-title">Qdrant</span>
+                  <span class="chip-tag">Rust Precision Engine</span>
+                </div>
+              </div>
+              <div class="tech-chip">
+                <div class="chip-main">
+                  <span class="chip-title">Redis Enterprise</span>
+                  <span class="chip-tag">Semantic Caching Layer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 4: Infrastructure & Security -->
+        <div class="col-lg-3 col-md-6">
+          <div class="tech-col-card">
+            <div class="col-header">
+              <div class="col-icon-wrap"><i class="bi bi-shield-check"></i></div>
+              <div>
+                <h4>Cloud & Security</h4>
+                <span class="col-sub">Enterprise SLA Ops</span>
+              </div>
+            </div>
+            <div class="tech-badge-list">
+              <div class="tech-chip">
+                <div class="chip-main">
+                  <span class="chip-title">AWS Bedrock / ECS</span>
+                  <span class="chip-tag">VPC Data Isolation</span>
+                </div>
+              </div>
+              <div class="tech-chip">
+                <div class="chip-main">
+                  <span class="chip-title">Google Cloud Vertex</span>
+                  <span class="chip-tag">SOC2 / HIPAA Compliant</span>
+                </div>
+              </div>
+              <div class="tech-chip">
+                <div class="chip-main">
+                  <span class="chip-title">Docker & Kubernetes</span>
+                  <span class="chip-tag">Immutable Reproducibility</span>
+                </div>
+              </div>
+              <div class="tech-chip">
+                <div class="chip-main">
+                  <span class="chip-title">Vercel Edge</span>
+                  <span class="chip-tag">Global Low-Latency UI</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SECTION 8: TESTIMONIALS -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="container-fluid px-lg-5 px-3">
+      <div class="section-header text-center" data-animate>
+        <span class="section-tag">CLIENT TESTIMONIALS</span>
+        <h2>What technology leaders<br><span class="gradient-text">say about working with NovaByte</span></h2>
+        <div class="rating-summary-banner mt-3">
+          <div class="rating-stars">
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+          </div>
+          <span class="rating-score">4.95 / 5.0 Rating</span>
+          <span class="rating-sep">•</span>
+          <span class="rating-count">Verified across 40+ Enterprise Deployments</span>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Testimonial 1 -->
+        <div class="col-lg-3 col-md-6" data-animate>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p>"NovaByte shipped our medical clinical RAG platform in just 3 weeks. The precision and attention to hallucination guardrails was world-class. Our physicians now query research papers 10x faster with complete trust."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar grad-1">SK</div>
+              <div class="author-info">
+                <strong>Dr. Sarah Kim</strong>
+                <span class="author-title">Chief Medical Officer</span>
+                <span class="author-company">CareSync Health</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="col-lg-3 col-md-6" data-animate>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p>"The autonomous financial copilot they engineered handles real-time risk checks across hundreds of feeds without breaking a sweat. It paid for its entire development cost within 30 days of production cutover."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar grad-2">MR</div>
+              <div class="author-info">
+                <strong>Marcus Rodriguez</strong>
+                <span class="author-title">VP of Engineering</span>
+                <span class="author-company">TradeCore Capital</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="col-lg-3 col-md-6" data-animate>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p>"Working with NovaByte felt like having a premier staff AI team inside our building. They understood our complex ERP constraints immediately and built self-healing retry logic that has kept our error rate near zero."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar grad-3">AP</div>
+              <div class="author-info">
+                <strong>Aisha Patel</strong>
+                <span class="author-title">Head of Global Operations</span>
+                <span class="author-company">Nexus Retail Group</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="col-lg-3 col-md-6" data-animate>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p>"NovaByte deployed an autonomous support agent that deflected 73% of our inbound inquiries while pushing our CSAT from 4.2 to 4.9. The telemetry dashboards in LangSmith gave us total visibility from day one."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar grad-4">DZ</div>
+              <div class="author-info">
+                <strong>David Zhao</strong>
+                <span class="author-title">Co-Founder & CTO</span>
+                <span class="author-company">SaaSify Cloud</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SECTION 9: FREQUENTLY ASKED QUESTIONS -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="faq-section" id="faq">
+    <div class="container-fluid px-lg-5 px-3">
+      <div class="section-header text-center" data-animate>
+        <span class="section-tag">COMMON QUESTIONS</span>
+        <h2>Everything you need to know<br><span class="gradient-text">before building with us</span></h2>
+        <p class="section-desc mx-auto">Straightforward answers on IP ownership, data privacy, development timelines, and our production guarantee.</p>
+      </div>
+
+      <div class="faq-container mx-auto" data-animate>
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Who owns the custom models, prompts, and source code?</span>
+            <i class="bi bi-plus-lg faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p><strong>You own 100% of everything we build.</strong> Upon project completion, all Git repositories, LangGraph workflow schemas, vector indexing configurations, evaluation test suites, and Docker deployment scripts are transferred directly into your company’s cloud accounts. There are zero licensing fees, zero royalties, and zero vendor lock-in.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How do you protect our proprietary data from being used to train LLMs?</span>
+            <i class="bi bi-plus-lg faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>We strictly enforce enterprise security boundaries. When using frontier models (Claude, OpenAI), we connect exclusively via Zero Data Retention (ZDR) enterprise APIs that legally guarantee your inputs and outputs are never stored or used for model training. For highly sensitive workflows, we deploy open-weights models (like Llama 3.3 or DeepSeek) inside your private AWS/GCP VPC or on-prem air-gapped infrastructure.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What does a typical 4-week engagement look like?</span>
+            <i class="bi bi-plus-lg faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>We work in rapid, highly structured sprints:
+              <br>• <strong>Week 1 (Architecture & POC):</strong> Data ingestion audit, evaluation metric design, and initial working prototype.
+              <br>• <strong>Week 2 (Data & Retrieval):</strong> Vector indexing, hybrid search, caching, and document ingestion streaming.
+              <br>• <strong>Week 3 (Agent Logic & Evals):</strong> Multi-step reasoning chains, API tool integrations, and automated guardrails.
+              <br>• <strong>Week 4 (Staging & Cutover):</strong> Container deployment, observability dashboard setup, load testing, and engineering team handoff.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Can your AI agents integrate with our legacy databases and internal ERPs?</span>
+            <i class="bi bi-plus-lg faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Rather than relying on generic connectors, we engineer typed, deterministic function-calling tools that interface seamlessly with PostgreSQL, MySQL, Snowflake, MongoDB, SAP, Salesforce, Zendesk, Slack, or any REST/GraphQL API. Every tool call includes strict schema validation, retry logic, and safety guardrails to prevent erroneous updates.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How do you guarantee accuracy and prevent hallucinations in production?</span>
+            <i class="bi bi-plus-lg faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>We implement a multi-layered guardrail defense: cross-encoder reranking to ensure only the most relevant document chunks reach the model, deterministic schema validation on all outputs, and automated LangSmith evaluation test suites running hundreds of synthetic and historical edge cases before each release. If confidence falls below your custom threshold, the system gracefully escalates to a human operator.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What support and warranty do you provide after deployment?</span>
+            <i class="bi bi-plus-lg faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Every deployment includes our <strong>30-Day Production Guarantee</strong> covering prompt fine-tuning, latency optimization, and bug fixes at zero additional charge. For ongoing needs, we offer dedicated monthly SLA retainers providing continuous model upgrades, quarterly evals refreshes, and 24/7 incident response.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- SECTION 10: CTA + CONTACT -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="contact-section" id="contact">
+    <div class="container-fluid px-lg-5 px-3">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5" data-animate>
+          <div class="contact-info">
+            <span class="section-tag">GET IN TOUCH</span>
+            <h2>Ready to build your<br><span class="gradient-text">intelligent systems?</span></h2>
+            <p class="contact-desc">
+              Book a free 30-minute architecture discovery call. We'll examine your specific data sources, assess feasibility, and outline a concrete 4-week production roadmap.
+            </p>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <i class="bi bi-envelope"></i>
+                </div>
+                <div class="contact-item-content">
+                  <span class="contact-item-label">Direct Email</span>
+                  <a href="mailto:hello@novabyte.ai" class="contact-item-val">hello@novabyte.ai</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <i class="bi bi-clock-history"></i>
+                </div>
+                <div class="contact-item-content">
+                  <span class="contact-item-label">Guaranteed Response Time</span>
+                  <span class="contact-item-val">Within 4 business hours</span>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <div class="contact-item-content">
+                  <span class="contact-item-label">Engineering Headquarters</span>
+                  <span class="contact-item-val">548 Market St, San Francisco, CA</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Instant Calendar Callout -->
+            <div class="calendar-callout">
+              <div class="cal-icon"><i class="bi bi-calendar3"></i></div>
+              <div class="cal-text">
+                <strong>Prefer instant booking?</strong>
+                <span>Skip the form and choose a time directly on our engineering calendar.</span>
+              </div>
+              <a href="mailto:hello@novabyte.ai?subject=Architecture%20Discovery%20Call%20Request" class="btn-cal">
+                <span>Direct Booking</span>
+                <i class="bi bi-box-arrow-up-right"></i>
+              </a>
+            </div>
+
+            <div class="nda-badge">
+              <i class="bi bi-shield-lock-fill text-success"></i>
+              <span>Mutual Non-Disclosure Agreement (NDA) executed before all proprietary workflow discussions.</span>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-lg-7" data-animate>
+          <div class="contact-form-wrap">
+            <div class="form-header">
+              <h3>Start Your Architecture Sprint</h3>
+              <p>Fill out the details below and a Senior AI Solutions Architect will review your requirements.</p>
+            </div>
+
+            <form id="contactForm" class="contact-form" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="name">Full Name <span class="req">*</span></label>
+                    <input type="text" id="name" name="name" placeholder="Sarah Mitchell" required>
+                    <span class="form-error-msg" id="nameError">Please enter your full name</span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="email">Work Email <span class="req">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="sarah@company.com" required>
+                    <span class="form-error-msg" id="emailError">Please enter a valid work email</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="company">Company / Organization <span class="req">*</span></label>
+                    <input type="text" id="company" name="company" placeholder="Acme Technologies" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="service">Primary Project Scope <span class="req">*</span></label>
+                    <select id="service" name="service" required>
+                      <option value="">Select a service focus</option>
+                      <option value="ai-agents">Autonomous AI Agents (LangGraph)</option>
+                      <option value="rag">Enterprise RAG Platform (pgvector)</option>
+                      <option value="automation">Workflow Automation Pipeline</option>
+                      <option value="chatbot">Conversational AI & Copilots</option>
+                      <option value="analytics">Predictive AI Analytics & BI</option>
+                      <option value="consulting">Architecture Audit & Roadmap</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="budget">Estimated Budget Range</label>
+                    <select id="budget" name="budget">
+                      <option value="tier1">&lt; $10,000 (Sprint POC)</option>
+                      <option value="tier2" selected>$10,000 – $25,000 (Production MVP)</option>
+                      <option value="tier3">$25,000 – $50,000 (Enterprise Multi-Agent)</option>
+                      <option value="tier4">$50,000+ (Full Platform Architecture)</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="timeline">Desired Kickoff Timeline</label>
+                    <select id="timeline" name="timeline">
+                      <option value="immediate" selected>Immediate (&lt; 2 Weeks)</option>
+                      <option value="month">Within 1 Month</option>
+                      <option value="quarter">Next Quarter</option>
+                      <option value="exploring">Just Exploring Options</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Project Scope & Data Sources</label>
+                <textarea id="message" name="message" rows="4"
+                  placeholder="Tell us about your data types (PDFs, SQL, APIs), user volume, and specific business problem you are looking to automate..."></textarea>
+              </div>
+
+              <div class="form-privacy-note">
+                <i class="bi bi-lock-fill"></i> Your information is protected under strict confidentiality and never shared.
+              </div>
+
+              <button type="submit" class="btn-submit" id="submitBtn">
+                <span>Submit Architecture Request</span>
+                <i class="bi bi-send-fill"></i>
+              </button>
+
+              <div class="form-success" id="formSuccess">
+                <div class="success-icon"><i class="bi bi-check-circle-fill"></i></div>
+                <div class="success-content">
+                  <strong>Request Dispatched Successfully!</strong>
+                  <span>Our Lead Architect will review your submission and reply with availability within 4 hours.</span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- FOOTER -->
+  <!-- ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container-fluid px-lg-5 px-3">
+      <div class="row g-4 mb-5">
+        <!-- Brand Summary & Newsletter -->
+        <div class="col-lg-4 col-md-12">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <img src="logo.jpg" alt="NovaByte Logo" class="logo-img">
+              <span class="logo-text">Nova<span class="logo-accent">Byte</span></span>
+            </div>
+            <p class="brand-desc">
+              Premier AI engineering studio designing, building, and deploying production-grade agentic architectures and sub-second RAG systems for modern enterprises.
+            </p>
+            <div class="footer-newsletter">
+              <span class="news-title">Join 4,200+ Engineers on our AI Briefing</span>
+              <form class="news-form" id="newsForm" onsubmit="event.preventDefault(); document.getElementById('newsSuccess').style.display='block'; this.reset();">
+                <input type="email" placeholder="Enter work email" required class="news-input">
+                <button type="submit" class="news-btn" aria-label="Subscribe to newsletter"><i class="bi bi-arrow-right"></i></button>
+              </form>
+              <div id="newsSuccess" class="text-success small mt-1" style="display:none;"><i class="bi bi-check2"></i> You're subscribed to weekly architecture breakdowns.</div>
+            </div>
+            <div class="footer-social-links">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="NovaByte on GitHub"><i class="bi bi-github"></i></a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="NovaByte on LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="NovaByte on X / Twitter"><i class="bi bi-twitter-x"></i></a>
+              <a href="https://discord.com" target="_blank" rel="noopener noreferrer" aria-label="NovaByte on Discord"><i class="bi bi-discord"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-6">
+          <div class="footer-col">
+            <h5>Core Services</h5>
+            <ul>
+              <li><a href="#services">Autonomous Agents</a></li>
+              <li><a href="#services">Enterprise RAG</a></li>
+              <li><a href="#services">Workflow Pipelines</a></li>
+              <li><a href="#services">Conversational AI</a></li>
+              <li><a href="#services">AI Analytics BI</a></li>
+              <li><a href="#services">Architecture Audit</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-6">
+          <div class="footer-col">
+            <h5>Company</h5>
+            <ul>
+              <li><a href="#why-us">Why NovaByte</a></li>
+              <li><a href="#calculator">ROI Estimator</a></li>
+              <li><a href="#process">4-Week Process</a></li>
+              <li><a href="#portfolio">Case Studies</a></li>
+              <li><a href="#tech">Tech Arsenal</a></li>
+              <li><a href="#testimonials">Client Proof</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-6">
+          <div class="footer-col">
+            <h5>Resources</h5>
+            <ul>
+              <li><a href="#faq">Frequently Asked</a></li>
+              <li><a href="#contact">Architecture Review</a></li>
+              <li><a href="#calculator">Savings Calculator</a></li>
+              <li><a href="mailto:security@novabyte.ai">Security Whitepaper</a></li>
+              <li><a href="mailto:careers@novabyte.ai">Join Our Team</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-6">
+          <div class="footer-col">
+            <h5>Get In Touch</h5>
+            <ul class="contact-sub-list">
+              <li><a href="mailto:hello@novabyte.ai"><i class="bi bi-envelope"></i> hello@novabyte.ai</a></li>
+              <li><span class="text-muted small"><i class="bi bi-clock"></i> Mon-Fri, 9am-6pm PST</span></li>
+              <li><span class="text-muted small"><i class="bi bi-geo-alt"></i> San Francisco, CA</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          &copy; 2026 NovaByte AI Studio Inc. All rights reserved. Enterprise-grade AI systems, engineered with integrity.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#contact">Privacy Policy</a>
+          <a href="#contact">Terms of Service</a>
+          <a href="#contact">Security & SOC-2</a>
+          <a href="#contact">Cookie Preferences</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc4s9bIOgUxi8T/jzmL7PIWPNFnNMmfBGSMgW9iMhv9" crossorigin="anonymous"></script>
+
+  <!-- Main Application JS -->
+  <script src="main.js"></script>
+</body>
+
+</html>
